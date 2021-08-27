@@ -1,0 +1,9 @@
+application/config/config.php
+vendor
+activejobs.zip
+.htaccess-original
+error_log
+uploads
+.idea
+.ftpquota
+application/session/*
