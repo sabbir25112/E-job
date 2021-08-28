@@ -85,6 +85,9 @@
 						<p class="address">
 							<strong><?=trans('posted_date')?>:</strong> <?= date('d-m-Y', strtotime($job_detail['created_date'])); ?>
 						</p>
+                        <p class="address">
+                            <strong>Job Description</strong>
+                        </p>
 						<p class="description">
 							<?= $job_detail['description']; ?>
 						</p>
