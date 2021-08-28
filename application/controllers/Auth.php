@@ -54,11 +54,12 @@ class Auth extends Main_Controller {
 //					}
 
 					$login_data = array(
-						'user_id' => $result['id'],
-						'email' => $result['email'], 
-						'password' => $result['password'],
-						'username' => $result['firstname'],
-						'is_user_login' => TRUE
+						'user_id'       => $result['id'],
+						'email'         => $result['email'],
+						'password'      => $result['password'],
+						'username'      => $result['firstname'],
+						'is_user_login' => TRUE,
+                        'is_verify'     => $result['is_verify'],
 					);
 
 					$this->session->set_userdata($login_data);

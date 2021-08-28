@@ -277,9 +277,7 @@ class Jobs extends Main_Controller {
 	// when applicant will apply for the job
 	public function apply_job()
 	{
-	    $result = $this->db->get_where('xx_users', array('id' => $this->session->userdata('user_id')))->row_array();
-
-        if($result['is_verify'] == 0){
+        if($this->session->userdata('is_verify') == 0){
             $this->session->set_flashdata('validation_errors', "Can't apply job without email verification");
             $last_request_page = $this->session->userdata('last_request_page');
             redirect($last_request_page);

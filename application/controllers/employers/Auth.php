@@ -45,18 +45,19 @@ class Auth extends Main_Controller {
 
 				if ($result) {
 
-					if($result['is_verify'] == 0){
-						$this->session->set_flashdata('error_login', 'Please verify your email address!');
-						redirect(base_url('employers/auth/login'));
-						exit();
-					}
+//					if($result['is_verify'] == 0){
+//						$this->session->set_flashdata('error_login', 'Please verify your email address!');
+//						redirect(base_url('employers/auth/login'));
+//						exit();
+//					}
 
 					$login_data = array(
-						'employer_id' => $result['id'],
-						'email' => $result['email'], 
-						'password' => $result['password'],
-						'username' => $result['firstname'],
-						'is_employer_login' => TRUE
+						'employer_id'       => $result['id'],
+						'email'             => $result['email'],
+						'password'          => $result['password'],
+						'username'          => $result['firstname'],
+						'is_employer_login' => TRUE,
+                        'is_verify'         => $result['is_verify'],
 					);
 
 					$this->session->set_userdata($login_data);
