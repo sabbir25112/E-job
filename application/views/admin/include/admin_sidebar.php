@@ -43,6 +43,8 @@ $cur_tab = $this->uri->segment(2)==''?'dashboard': $this->uri->segment(2);
             <ul class="treeview-menu">
               <li id=""><a href="<?= base_url('admin/profile'); ?>"><i class="fa fa-circle-o"></i>Admin Profile</a></li>
               <li id=""><a href="<?= base_url('admin/profile/change_pwd'); ?>"><i class="fa fa-circle-o"></i>Change Password</a></li>
+              <li id=""><a href="<?= base_url('admin/admins'); ?>"><i class="fa fa-circle-o"></i>Admin List</a></li>
+              <li id=""><a href="<?= base_url('admin/admins/add'); ?>"><i class="fa fa-circle-o"></i>Add New Admin</a></li>
             </ul>
           </li>
       </ul>
